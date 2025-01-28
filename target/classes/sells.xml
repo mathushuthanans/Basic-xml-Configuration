@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean name="reg" class="com.configs.service.Register" scope="prototype">
+        <property name="product" ref="product"/>
+        <property name="hib" ref="app"/>
+    </bean>
+    <bean name="product" class="com.configs.service.Product" scope="prototype"/>
+    <bean name="app" class="com.configs.repo.Hib"/>
+
+</beans>
